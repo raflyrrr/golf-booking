@@ -269,6 +269,5 @@ if(empty($_SESSION['username'])){
 
     
     
-<?php include ('footer.php') ?>
 </body>
 </html>

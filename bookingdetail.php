@@ -164,7 +164,6 @@ if(empty($_SESSION['username'])){
     
 
 </body>
-<?php include('footer.php') ?>
 </html>
 
 <?php

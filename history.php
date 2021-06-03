@@ -93,6 +93,5 @@ if(empty($_SESSION['username'])){
     ?>
 
     </div>
-    <?php include ('footer.php')?>
 </body>
 </html>
