@@ -112,7 +112,7 @@ if (empty($_SESSION['username'])) {
             </div>
 
             <div class="mt-3 mb-1">
-                <div class="mb-4">
+                <div class="mb-1">
                     <p class="text-muted">Total Harga:</p>
                     <h4>Rp. <?php echo money_format($price); ?></h4>
                 </div>
@@ -144,9 +144,18 @@ if (empty($_SESSION['username'])) {
         <?php
         if ($status == "Waiting for Confirmation" && $tgl >= $now) {
         ?>
-            <div class="container mt-3 mb-2 ">
-                <div class="mb-4">
-                    <a href="https://api.whatsapp.com/send?phone=6289653455762&text=Halo%2C%20saya%20ingin%20mengkonfirmasi%20pembayaran%20dengan%20Order%20id%3A%20<?php echo $transnum ?>%2C%20Username%3A%20<?php echo $username?>%2C%20Total%20pembayaran%3A%20Rp.<?php echo $price?>" class="btn btn-success" target="_blank"><i class="fab fa-whatsapp"></i> Konfirmasi Pembayaran</a>
+
+            <div class="container mb-2">
+                <div class="mb-1">
+                    Untuk pembayaran silahkan dapat transfer di rekening dibawah ini :
+                    <br>
+                    <br>
+                    <img src="assets/img/bca.svg" width="80px" class="mr-3">Bank BCA
+                    <br>
+                    <p class="mt-2">No. Rekening 012345-123-123-123 atas nama <span class="norek">Lets Golf</span></p>
+                </div>
+                <div class="mt-4 mb-4">
+                    <a href="https://api.whatsapp.com/send?phone=6289653455762&text=Halo%2C%20saya%20ingin%20mengkonfirmasi%20pembayaran%20dengan%20Order%20id%3A%20<?php echo $transnum ?>%2C%20Username%3A%20<?php echo $username ?>%2C%20Total%20pembayaran%3A%20Rp.<?php echo $price ?>" class="btn btn-success" target="_blank"><i class="fab fa-whatsapp"></i> Konfirmasi Pembayaran</a>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
                         Batalkan Pemesanan
                     </button>
