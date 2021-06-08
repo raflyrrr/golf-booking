@@ -17,14 +17,14 @@ if (!empty($_SESSION['username'])) {
     <title>Lets Golf</title>
     <style class="bg">
         body {
-            background: url("res/img/golfbg.jpg") no-repeat fixed center;
+            background: url("assets/img/golfbg.jpg") no-repeat fixed center;
             position: relative;
             background-size: 100%;
 
         }
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="res/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <?php include('navbar.php'); ?>
 
 </head>

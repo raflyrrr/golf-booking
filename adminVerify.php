@@ -14,7 +14,7 @@ if (empty($_SESSION['inputAdmin'])) {
 	<title>Lets Golf</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="res/css/style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 
 	<style>
 		.align-middle {
@@ -73,6 +73,7 @@ if (empty($_SESSION['inputAdmin'])) {
 				<table class="table table-bordered table-striped" id='empTable'>
 					<thead>
 						<tr>
+							<th><span onclick='sortTable("orderid");'>Order Id</span></th>
 							<th><span onclick='sortTable("username");'>Username</span></th>
 							<th><span onclick='sortTable("phonenum");'>Nomor Telepon</span></th>
 							<th><span onclick='sortTable("tgl");'>Tanggal</span></th>
@@ -88,6 +89,7 @@ if (empty($_SESSION['inputAdmin'])) {
 					?>
 						<tbody>
 							<tr>
+								<td class="align-middle"><?php echo $data['transnum']; ?></td>
 								<td class="align-middle"><?php echo $data['username']; ?></td>
 								<td class="align-middle"><?php echo $data['phonenum']; ?></td>
 								<td class="align-middle"><?php echo $data['tgl']; ?></td>

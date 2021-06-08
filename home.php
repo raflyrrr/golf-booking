@@ -17,13 +17,13 @@ if (empty($_SESSION['username'])) {
     <title>Login - Lets Golf</title>
     <style class="img-fluid">
         body {
-            background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("res/img/golfbg.jpg") no-repeat fixed center;
+            background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("assets/img/golfbg.jpg") no-repeat fixed center;
             background-size: 100%;
         }
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="res/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 

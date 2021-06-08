@@ -11,13 +11,13 @@ $db_connection = mysqli_connect("127.0.0.1", "root","", "letsgolf");
     <title>Daftar - Lets Golf</title>
 <style>
     body { 
-        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("res/img/golfbg.jpg") no-repeat ;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("assets/img/golfbg.jpg") no-repeat ;
         background-size: 100%;
         
     }   
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="res/css/style.css">    
+    <link rel="stylesheet" href="assets/css/style.css">    
 
 </head>
 <body>
