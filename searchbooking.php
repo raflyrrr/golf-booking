@@ -44,7 +44,7 @@ if(empty($_SESSION['username'])){
     $now = date('Y-m-d');
     $newformat = date('l\, F jS Y',$time);
     $day = floor(($time - time())/86400);
-    if($day+1 <0 || $day+1 > 7 || $field<1 || $field>5 ){
+    if($day+1 <0 || $day+1 > 7 ){
         header("location:home.php");
     }else{
         echo'<div class="container mt-5 mb-1">';
@@ -56,7 +56,7 @@ if(empty($_SESSION['username'])){
             <p  style="display:inline;"><font color="white">'.$newformat.'</font></p>
             </div>
             <div class="col-md-6">
-            <p class = "ml-2 mt-2" style="display:inline;"><font color="white">Field '.$field.'</font></p>
+            <p class = "ml-2 mt-2" style="display:inline;"><font color="white">Lapangan '.$field.'</font></p>
             </div>
         </div>';
         
@@ -66,7 +66,7 @@ if(empty($_SESSION['username'])){
         //echo $date;
         for($x=7; $x<=23; $x++){
             $available=true;
-            $query = "select * from booking where tgl = '$date' and field=$field;";
+            $query = "select * from booking where tgl = '$date' and field='$field';";
             $query_run = mysqli_query($db_connection,$query);
             while($row = mysqli_fetch_assoc($query_run)){
                 if($row['start'] <= $x && $x < $row['end']){
@@ -146,7 +146,7 @@ if(empty($_SESSION['username'])){
         $duration = $_POST["duration"];
         $end_time = $start_time + $duration;
         $conflict = false;
-        $query = "select * from booking where tgl = '$date' and field=$field;";
+        $query = "select * from booking where tgl = '$date' and field='$field';";
         $query_run = mysqli_query($db_connection,$query);
         while($row = mysqli_fetch_assoc($query_run)){
             if( ($start_time <= $row['start'] && $end_time >= $row['end']) || ($start_time>=$row['start'] && $start_time<$row['end']) || ($end_time>$row['start'] && $end_time<=$row['end']) ){
@@ -185,7 +185,7 @@ if(empty($_SESSION['username'])){
                             </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputPassword" class="col-sm-2 col-form-label">Nomor Lapangan</label>
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Nama Lapangan</label>
                         <div class="col-sm-10">
                             <input type="text" readonly class="form-control-plaintext" id="inputPassword" value=": <?php echo $field;?>">
                         </div>
@@ -206,7 +206,7 @@ if(empty($_SESSION['username'])){
                         <label for="inputPassword" class="col-sm-2 col-form-label">Total Harga</label>
                         <div class="col-sm-10">
                             <?php
-                             $queryHarga = "select * from field where harga and fieldnum = $field;";
+                             $queryHarga = "select * from field where harga and fieldnum = '$field';";
                              $query_run = mysqli_query($db_connection,$queryHarga);
                              while($row = mysqli_fetch_assoc($query_run)){
                                 
@@ -251,7 +251,7 @@ if(empty($_SESSION['username'])){
                 <?php
                 if(isset($_POST['confirm'])){
                     $query = "  insert into booking (tgl,start,end,duration,username,fieldnum) values 
-                                ('$date',$start_time,$end_time,$duration,$username,$field);";
+                                ('$date',$start_time,$end_time,$duration,$username,'$field');";
                     $query_run = mysqli_query($db_connection,$query);
                     if($query_run){
                         echo 'Sukses booking';

@@ -10,7 +10,7 @@
 				<th><span onclick='sortTable("start");'>Mulai</span></th>
 				<th><span onclick='sortTable("end");'>Selesai</span></th>
 				<th><span onclick='sortTable("duration");'>Durasi</span></th>
-				<th><span onclick='sortTable("fieldnum");'>No. Lapangan</span></th>
+				<th><span onclick='sortTable("fieldnum");'>Nama Lapangan</span></th>
 				<th><span onclick='sortTable("price");'>Harga</span></th>
 				<th><span onclick='sortTable("price");'>Status</span></th>
 				<th>Aksi</th>

@@ -85,7 +85,7 @@ if (isset($_POST['submit'])) {
                 while ($row = mysqli_fetch_assoc($query_run)) {
                 ?>
                     <div class="control-group">
-                        <label class="control-label" for="basicinput">No. Lapangan</label>
+                        <label class="control-label" for="basicinput">Nama Lapangan</label>
                         <div class="controls">
                             <input type="text" name="fieldnum" required value="<?php echo $row['fieldnum'] ?>">
                         </div>

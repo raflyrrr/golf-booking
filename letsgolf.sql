@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 03, 2021 at 03:38 AM
+-- Generation Time: Jul 12, 2021 at 04:26 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.3.2
 
@@ -35,18 +35,11 @@ CREATE TABLE `booking` (
   `start` int(10) NOT NULL,
   `end` int(10) NOT NULL,
   `duration` int(10) NOT NULL,
-  `field` int(10) NOT NULL,
+  `field` varchar(30) NOT NULL,
   `price` int(20) NOT NULL,
   `status` varchar(30) NOT NULL DEFAULT 'Waiting for Confirmation',
   `datecreated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `booking`
---
-
-INSERT INTO `booking` (`transnum`, `username`, `tgl`, `start`, `end`, `duration`, `field`, `price`, `status`, `datecreated`) VALUES
-(1, 'raflyrdn', '2021-06-03', 7, 8, 1, 1, 130000, 'Waiting for Confirmation', '2021-06-03 10:31:48');
 
 -- --------------------------------------------------------
 
@@ -67,10 +60,7 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`name`, `phonenum`, `username`, `password`, `role`) VALUES
-('Rafli Ramadhan', '123123', 'raflyrdn', '$2y$10$YjTMB06GtQPJf4WExfjMB.cSyaA/NIhqVTEJdf/juLIY9TBYB7g9K', 'user'),
-('rafli', '0882', 'rafli', '123123', 'admin'),
-('Rafli R', '123123123', 'raflyr3', '$2y$10$LLSn6dhPgJuYHpO/lLDFeeF2XZAd3fyCPhvC6nPyPg8jA58OaTIm.', 'user'),
-('Dara Mulia', '088123', 'darmul', '$2y$10$KZ9T9SnUNeQjQxaKjBAeJut5AxAU1vCNXoC/Pf.wStzVSfemUbSkG', 'user');
+('admin', '021', 'admin', 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -79,21 +69,11 @@ INSERT INTO `customer` (`name`, `phonenum`, `username`, `password`, `role`) VALU
 --
 
 CREATE TABLE `field` (
-  `fieldnum` int(10) NOT NULL,
+  `fieldnum` varchar(30) NOT NULL,
   `harga` int(10) NOT NULL,
   `hargamalam` int(11) NOT NULL,
   `gambar` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `field`
---
-
-INSERT INTO `field` (`fieldnum`, `harga`, `hargamalam`, `gambar`) VALUES
-(1, 130000, 150000, 'golf.jpg'),
-(2, 130000, 150000, 'golfbg.jpg'),
-(3, 130000, 200000, 'golfbg.jpg'),
-(4, 130000, 150000, 'golfbg.jpg');
 
 -- --------------------------------------------------------
 
@@ -109,7 +89,7 @@ CREATE TABLE `transaksi` (
 ,`start` int(10)
 ,`end` int(10)
 ,`duration` int(10)
-,`fieldnum` int(10)
+,`fieldnum` varchar(30)
 ,`price` int(20)
 ,`status` varchar(30)
 );
@@ -128,7 +108,7 @@ CREATE TABLE `verifikasi` (
 ,`start` int(10)
 ,`end` int(10)
 ,`duration` int(10)
-,`fieldnum` int(10)
+,`fieldnum` varchar(30)
 ,`status` varchar(30)
 );
 
@@ -166,7 +146,7 @@ ALTER TABLE `booking`
 -- Indexes for table `field`
 --
 ALTER TABLE `field`
-  ADD PRIMARY KEY (`fieldnum`);
+  ADD PRIMARY KEY (`fieldnum`) USING BTREE;
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -176,13 +156,7 @@ ALTER TABLE `field`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `transnum` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `field`
---
-ALTER TABLE `field`
-  MODIFY `fieldnum` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `transnum` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Constraints for dumped tables

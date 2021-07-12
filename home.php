@@ -69,8 +69,6 @@ if (empty($_SESSION['username'])) {
     if (isset($_POST['date_search'])) {
         $field = $_POST['field'];
         $date = $_POST['date'];
-
-
         $time = strtotime($date);
         $now = date('Y-m-d');
         $newformat = date('l\, F jS Y', $time);

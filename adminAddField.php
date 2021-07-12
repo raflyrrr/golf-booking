@@ -78,7 +78,7 @@ if (isset($_POST['submit'])) {
             <?php } ?>
             <form class="mt-5" method="post" enctype="multipart/form-data">
                 <div class="control-group">
-                    <label class="control-label" for="basicinput">No. Lapangan</label>
+                    <label class="control-label" for="basicinput">Nama Lapangan</label>
                     <div class="controls">
                         <input type="text" name="fieldnum" required>
                     </div>

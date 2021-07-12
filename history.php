@@ -58,7 +58,7 @@ if(empty($_SESSION['username'])){
     <?php
     $username = $_SESSION["username"];
     $now = date('Y-m-d');
-    $query = "select * from booking where username = '$username' order by datecreated desc";
+    $query = "select * from booking where username = '$username' and status = 'Accepted' order by datecreated desc";
     $query_run = mysqli_query($db_connection,$query);
     while($row = mysqli_fetch_assoc($query_run)){
         $transnum = $row['transnum'];

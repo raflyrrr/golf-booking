@@ -80,7 +80,7 @@ if (empty($_SESSION['inputAdmin'])) {
 							<th><span onclick='sortTable("start");'>Mulai</span></th>
 							<th><span onclick='sortTable("end");'>Selesai</span></th>
 							<th><span onclick='sortTable("duration");'>Durasi</span></th>
-							<th><span onclick='sortTable("fieldnum");'>No. Lapangan</span></th>
+							<th><span onclick='sortTable("fieldnum");'>Nama Lapangan</span></th>
 							<th>Aksi</th>
 						</tr>
 					</thead>

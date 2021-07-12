@@ -18,7 +18,7 @@ $end_time = $start_time+$duration;
 echo $price;
 
 $query = " insert into booking (tgl,start,end,duration,username,field,price) values 
-            ('$date',$start_time,$end_time,$duration,'$username',$field,$price);";
+            ('$date',$start_time,$end_time,$duration,'$username','$field',$price);";
 $query_run = mysqli_query($db_connection,$query);
 if($query_run){
     unset($_SESSION['date']);
