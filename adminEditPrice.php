@@ -111,7 +111,7 @@ if (isset($_POST['submit'])) {
                     </div>
 
                 <?php } ?>
-                <div class="control-group">
+                <div class="control-group mb-5">
                     <div class="controls">
                         <a href="adminField.php" class="btn btn-primary mt-3" role="button">Kembali</a>
                         <button type="submit" name="submit" class="btn btn-success mt-3">Perbarui</button>
@@ -119,7 +119,6 @@ if (isset($_POST['submit'])) {
                 </div>
             </form>
         </div>
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
